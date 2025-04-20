@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="collection of black hat tricks and tools">
+    <meta name="author" content="Rickshun">
+    <link rel="stylesheet" href="man.css">
+    <title>East Africa Hackers</title>
+    <!-- Add Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <style>
+        
+                .wide-button {
+            margin: 10px auto;
+            padding: 15px;
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: block;
+        }
+        
+        .wide-button:hover {
+            background-color: #555;
+        }
+        
+        .button-icon {
+            font-size: 1.2em;
+            margin-right: 10px;
+        }
+        
+        .button-links {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+        
+        .button-link {
+            color: #4CAF50;
+            text-decoration: none;
+            margin: 5px 0;
+            padding: 5px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 3px;
+        }
+        
+        .button-link:hover {
+            background-color: rgba(255,255,255,0.2);
+        }
+            
+        /* Comment section styling */
+        #commentSection {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #2d2d2d;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            max-width: 600px;
+        }
+        
+        #commentText {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #444;
+            border-radius: 4px;
+            resize: vertical;
+            background-color: #333;
+            color: #e0e0e0;
+        }
+        
+        #submitComment {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        #submitComment:hover {
+            background-color: #45a049;
+        }
+        
+        .comment {
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #333;
+            border-left: 4px solid #4CAF50;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .comment small {
+            display: block;
+            color: #aaa;
+            margin-top: 5px;
+            font-size: 0.8em;
+        }
+        
+        #commentsList {
+            margin-top: 20px;
+        }
+        
+        .comment-author {
+            font-weight: bold;
+            color: #4CAF50;
+        }
+        
+        /* Dark mode toggle */
+        #darkModeToggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: #333;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <button id="darkModeToggle">☀️</button>
+
+    <header id="int">
+        <div class="container">
+        <ul>
+            <li><a href="index.html"><b>HOME</b></a></li>
+         <li><a href="about.html"><b>ABOUT US</b></a></li>   
+        </ul>
+        </div>
+    </header>    
+    <div><img src="Screenshot_20250415-140314~2.jpg" width="100px" height="100px" alt="rickwolrd logo">
+    <img src="IMG_20250416_134626_714.jpg" width="100" height="100" alt="">
+    </div>    
+         
+        <h1 id="hstyle"> East Africa Hackers </h1>
+        <div>
+        <p id="toni">
+            <b>karibu east Africa black  and white hat hackers community.<br>
+            kama unauhitaji wa kujifunza udukuzi halali(ethical hacking) , programming language,uandishi wa tovuti na mambo mengine mengi ili kukuza uelewa wako katika mambo ya <u>Technology</u> na <u>it</u>
+            kwa ujumla</b><br>
+           <b> pia utaweza kujifunza mambo kiupana na kujua siri mbalimbali za hackers.</b><br><u>mfano</u><br><b>utumiaji wa RDP(remote desktop protocal)
+            kwa ajili ya anonymousit kwa kujaribu RDP 👉</b><a href="https://app.apponfly.com/trial">bonyeza hapa</a></div><br><br>
+            <b id="int">available services:</b><br>
+               <div id="dus">
+            <ul>
+               <li><b>👉premium hacks</b></li>
+               <li><b>👉free whatsapp bot deployment</b></li>
+               <li><b>👉social media hacking</b></li>
+               <li><b>👉money making tricks</b></li>
+               <li><b>👉free followers tricks</b></li>
+               <li><b>👉carding and tempering</b> </li>
+               <li><b>👉free internet tricks</b></li>
+               <li><b>👉programming languages learning</b></li>
+               <li><b>👉Whatsapp ban and unban</b></li>
+               <li><b>👉account cracking</b></li>
+               <li><b>👉darkweb link giveaway</b></li>
+               <li><b>👉premium unlocked apps</b></li>
+            </ul>
+            </div> 
+            <div>
+                <b>
+                    jiunge nasi kupitia channel zetu na magroup yetu ya whatsapp <div id="hstyle">NOTE:<br>clink on a specif channel or group</div>
+                </b>
+            </div>             
+        </p>
+        <div class="button-container">
+        <button id="button1" class="wide-button">
+            <span class="button-icon">🎩RICKWORLD:</span>
+            <div class="button-links">
+                <a href="https://whatsapp.com/channel/0029VauhDBJ42Dclb5MYKu3H" class="button-link"><b>WHATSAPP CHANNEL</b></a>
+                <a href="https://t.me/rickwareworld" class="button-link"><b>TELEGRAM CHANNEL</b></a>
+                <a href="https://t.me/rickware007" class="button-link"><b>TELEGRAM GROUP</b></a>
+            </div>
+        </button>
+        
+        <button id="button2" class="wide-button">
+            <span class="button-icon">💻 TECHNOTROV:</span>
+            <div class="button-links">
+                <a href="https://t.me/atlegit_issue" class="button-link"><b>TELEGRAM CHANNEL</b></a>
+                <a href="https://t.me/trovhackerz" class="button-link"><b>TELEGRAM GROUP</b></a>
+                <a href="https://chat.whatsapp.com/CUMtCkl1yBI88tfiybub79"class="button-link"><b>WHATSAPP GROUP</b></a>
+            </div>
+        </button>
+        
+        <button id="button3" class="wide-button">
+            <span class="button-icon">★extra channel</span>
+            <b>MOOLAH MEMES AND JOKES</b>
+        </button>
+        
+        <!-- Comment Button -->
+        <button id="commentButton" class="wide-button">
+            <span class="button-icon">💬</span>
+            <b>COMMENTS SECTION</b>
+        </button>
+    </div>
+
+    <!-- Comment Section -->
+    <div id="commentSection" class="container">
+        <h3>weka comment hapa</h3>
+        <div id="authContainer">
+            <input type="text" id="username" placeholder="Your name" style="padding: 8px; margin-right: 10px;">
+            <button id="authButton">Set Name</button>
+        </div>
+        <textarea id="commentText" rows="4" placeholder="Write your comment here..."></textarea>
+        <button id="submitComment">Submit Comment</button>
+        
+        <div id="commentsList">
+            <!-- Comments will appear here -->
+            <p>Loading comments...</p>
+        </div>
+    </div>
+
+    <script>
+        // Firebase configuration - REPLACE WITH YOUR ACTUAL CONFIG
+        const firebaseConfig = {
+            apiKey: "AIzaSyDlIe0MT1qRVitgxQ_sC70BjqiqOZABCYI",
+            authDomain: "east-africa-hackers.firebaseapp.com",
+            databaseURL: "https://east-africa-hackers-default-rtdb.firebaseio.com/",
+            projectId: "east-africa-hackers",
+            storageBucket: "east-africa-hackers.firebasestorage.app",
+            messagingSenderId: "558790898268",
+            appId: "1:558790898268:web:2335fc7974f96215316c99"
+        };
+        
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Existing button functionality
+            const button1 = document.getElementById('button1');
+            const button1Links = button1.querySelectorAll('.button-link');
+            
+            button1Links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                });
+            });
+            
+            button1.addEventListener('click', function() {
+                window.location.href = "https://whatsapp.com/channel/0029VauhDBJ42Dclb5MYKu3H";
+            });
+            
+            const button2 = document.getElementById('button2');
+            const button3 = document.getElementById('button3');
+            
+            button2.addEventListener('click', function() {
+                window.open("https://chat.whatsapp.com/CUMtCkl1yBI88tfiybub79", "_blank");
+            });
+            
+            button3.addEventListener('click', function() {
+                window.location.href = "https://whatsapp.com/channel/0029VbAQNrI6rsQye3psz525";
+            });
+            
+            // Comment section functionality
+            const commentButton = document.getElementById('commentButton');
+            const commentSection = document.getElementById('commentSection');
+            const submitComment = document.getElementById('submitComment');
+            const commentText = document.getElementById('commentText');
+            const commentsList = document.getElementById('commentsList');
+            const usernameInput = document.getElementById('username');
+            const authButton = document.getElementById('authButton');
+            
+            let currentUser = localStorage.getItem('commentUsername') || 'Anonymous';
+            
+            // Set up authentication
+            authButton.addEventListener('click', function() {
+                const name = usernameInput.value.trim();
+                if (name) {
+                    currentUser = name;
+                    localStorage.setItem('commentUsername', name);
+                    alert(`Username set to: ${name}`);
+                }
+            });
+            
+            // Initially show the comment section
+            commentSection.style.display = 'block';
+            
+            // Toggle comment section visibility
+            commentButton.addEventListener('click', function() {
+                if (commentSection.style.display === 'none') {
+                    commentSection.style.display = 'block';
+                    commentSection.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    commentSection.style.display = 'none';
+                }
+            });
+            
+            // Submit comment functionality
+            submitComment.addEventListener('click', function() {
+                const comment = commentText.value.trim();
+                if (comment) {
+                    // Push comment to Firebase
+                    database.ref('comments').push({
+                        text: comment,
+                        author: currentUser,
+                        timestamp: firebase.database.ServerValue.TIMESTAMP
+                    });
+                    
+                    commentText.value = ''; // Clear the textarea
+                }
+            });
+            
+            // Function to add a comment to the display
+            function addComment(text, author, timestamp) {
+                const commentElement = document.createElement('div');
+                commentElement.className = 'comment';
+                commentElement.innerHTML = `
+                    <p><span class="comment-author">${author}:</span> ${text}</p>
+                    <small>${new Date(timestamp).toLocaleString()}</small>
+                `;
+                commentsList.prepend(commentElement); // Newest comments first
+            }
+            
+            // Load comments from Firebase
+            function loadComments() {
+                commentsList.innerHTML = ''; // Clear loading message
+                
+                database.ref('comments').orderByChild('timestamp').limitToLast(50).on('value', (snapshot) => {
+                    commentsList.innerHTML = ''; // Clear existing comments
+                    
+                    const comments = [];
+                    snapshot.forEach((childSnapshot) => {
+                        comments.push({
+                            id: childSnapshot.key,
+                            ...childSnapshot.val()
+                        });
+                    });
+                    
+                    // Sort by timestamp (newest first)
+                    comments.sort((a, b) => b.timestamp - a.timestamp);
+                    
+                    // Display comments
+                    comments.forEach(comment => {
+                        addComment(comment.text, comment.author, comment.timestamp);
+                    });
+                    
+                    if (comments.length === 0) {
+                        commentsList.innerHTML = '<p>No comments yet. Be the first to comment!</p>';
+                    }
+                });
+            }
+            
+            loadComments();
+            
+            // Dark mode toggle
+            const darkModeToggle = document.getElementById('darkModeToggle');
+            darkModeToggle.addEventListener('click', function() {
+                document.body.classList.toggle('light-mode');
+                const isDark = !document.body.classList.contains('light-mode');
+                darkModeToggle.textContent = isDark ? '☀️' : '🌙';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="collection of black hat tricks and tools">
+    <meta name="author" content="Rickshun">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>East Africa Hackers</title>
+    <link rel="stylesheet" href="man.css">
+    
+</head>
+<body>
+    <div id="main-content">
+        <header id="int">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html"><b>HOME</b></a></li>
+                    <li><a href="about.html"><b>ABOUT US</b></a></li>   
+                </ul>
+            </div>
+        </header>
+        
+        <div class="neon-container">
+            <div><img src="Screenshot_20250415-140314~3.jpg" width="300px" height="300px" alt="tech"></div>
+            
+            <h1 id="hstyle"> HACK THE WORLD </h1>
+            
+            <div class="button-container">
+                <button id="button1" class="wide-button">
+                    <span class="button-icon">📱</span>
+                    PREMIUM UNLOCKED APPS
+                </button>
+                
+                <button id="button2" class="wide-button">
+                    <span class="button-icon">🎩</span>
+                    FREE PREMIUM HACKS
+                </button>
+                
+                <button id="button3" class="wide-button">
+                    <span class="button-icon">💻</span>
+                    FREE RDP TRIAL
+                </button>
+                <button id="button4" class="wide-button">
+                    <span class="button-icon">🎉</span>
+                    PREMIUM CHANNELS
+                </button>
+            </div>
+            
+            <p id="int">
+                WELCOME: <i><b>East Africa Hackers Community</b></i><br>
+                °THIS IS A NETWORK FOR<br>
+                <div id="dus">
+                    <ul>
+                        <li>LEARN HACKING</li>
+                        <li>HACKING TRICKS</li>
+                        <li>FREE NETWORK</li>
+                        <li>CARDING</li>
+                        <li>PROGRAMMING LANGUAGES</li>
+                        <li>AND ALL ABOUT TECHNOLOGY</li>
+                    </ul>
+                    STAY WITH US FOR <b><u>PREMIUM AND LATEST METHOD</u></b><br>
+                    FOR MORE INFORMATION SEE <b>ABOUT US</b> OR CLICK ON <b>PREMIUM CHANNEL</b><br>
+                </div>
+            </p>
+            
+            <footer>
+                <b>☎️CONTACT DEVELOPER ON WHATSAPP☎️</b><br>
+                <button id="text"><a href="https://wa.me/+255761918542">CLICK HERE</a></button>
+            </footer>
+        </div>
+    </div>
+    
+    <!-- Modal for channel follow requirement -->
+    <div id="channelModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>ACCESS REQUIREMENT</h2>
+            <p>To access our premium content, you must first join our official WhatsApp channel:</p>
+            <a href="https://whatsapp.com/channel/0029VauhDBJ42Dclb5MYKu3H" class="channel-link" target="_blank">
+                JOIN OUR WHATSAPP CHANNEL
+            </a>
+            <p>After joining, click the button below to verify and continue:</p>
+            <button id="verifyBtn" class="verify-btn">I'VE JOINED - VERIFY</button>
+            <p><small>Note: You must join the channel to access any content</small></p>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if user has already followed the channel
+            const hasFollowed = localStorage.getItem('hasFollowedChannel');
+            
+            if (!hasFollowed) {
+                // Show modal and blur content
+                const modal = document.getElementById('channelModal');
+                const mainContent = document.getElementById('main-content');
+                
+                modal.style.display = "block";
+                mainContent.classList.add('blur');
+                
+                // Close button
+                document.querySelector('.close').addEventListener('click', function() {
+                    modal.style.display = "none";
+                    // Don't remove blur if not verified
+                });
+                
+                // Verify button
+                document.getElementById('verifyBtn').addEventListener('click', function() {
+                    localStorage.setItem('hasFollowedChannel', 'true');
+                    modal.style.display = "none";
+                    mainContent.classList.remove('blur');
+                });
+            }
+            
+            // Button click handlers - will only work if channel was followed
+            const button1 = document.getElementById('button1');
+            const button2 = document.getElementById('button2');
+            const button3 = document.getElementById('button3');
+            const button4 = document.getElementById('button4');            
+            
+            function checkAccess() {
+                if (!localStorage.getItem('hasFollowedChannel')) {
+                    const modal = document.getElementById('channelModal');
+                    const mainContent = document.getElementById('main-content');
+                    
+                    modal.style.display = "block";
+                    mainContent.classList.add('blur');
+                    return false;
+                }
+                return true;
+            }
+            
+            button1.addEventListener('click', function() {
+                if (checkAccess()) {
+                    window.location.href = "https://modder.me/apps";
+                }
+            });
+            
+            button2.addEventListener('click', function() {
+                if (checkAccess()) {
+                    window.open("freehacks.html", "_blank");
+                }
+            });
+            
+            button3.addEventListener('click', function() {
+                if (checkAccess()) {
+                    window.location.href = "https://app.apponfly.com/trial";
+                }
+            });
+            
+            button4.addEventListener('click', function() {
+                if (checkAccess()) {
+                    window.location.href = "about.html";
+                }
+            });
+        });
+    </script>
+</body>
+</html>

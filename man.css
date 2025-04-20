@@ -1,0 +1,308 @@
+  /* Cyberpunk/Neon Theme with Animated Background */
+        :root {
+            --neon-blue: #0ff0fc;
+            --neon-pink: #ff2a6d;
+            --neon-purple: #d300c5;
+            --dark-bg: #0d0221;
+            --text-color: #ffffff;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('01.gif');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: var(--text-color);
+            font-family: 'Courier New', monospace;
+            min-height: 100px;
+        }
+        
+        .neon-container {
+            border: 2px solid var(--neon-blue);
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 900px;
+            box-shadow: 0 0 10px var(--neon-blue), 
+                        inset 0 0 10px var(--neon-blue);
+            position: relative;
+            overflow: hidden;
+            background-color: rgba(13, 2, 33, 0.7);
+        }
+        
+        .neon-container::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border: 2px solid var(--neon-pink);
+            border-radius: 5px;
+            animation: pulse 4s infinite alternate;
+            pointer-events: none;
+        }
+        
+        .neon-container::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border: 2px solid var(--neon-purple);
+            border-radius: 5px;
+            animation: pulse2 3s infinite alternate;
+            pointer-events: none;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 0.3; }
+            100% { opacity: 0.8; }
+        }
+        
+        @keyframes pulse2 {
+            0% { opacity: 0.2; }
+            100% { opacity: 0.5; }
+        }
+        
+        h1 {
+            color: var(--neon-blue);
+            text-align: center;
+            text-shadow: 0 0 5px var(--neon-blue);
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        
+        .button-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 30px 0;
+        }
+        
+        .wide-button {
+            background-color: transparent;
+            border: 2px solid var(--neon-blue);
+            color: var(--neon-blue);
+            padding: 12px 25px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.3s;
+            min-width: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .wide-button:hover {
+            background-color: var(--neon-blue);
+            color: var(--dark-bg);
+            box-shadow: 0 0 15px var(--neon-blue);
+            transform: translateY(-3px);
+        }
+        
+        #int {
+            color: var(--neon-blue);
+            font-size: 1.3em;
+            margin: 15px 0;
+        }
+        
+        #dus ul {
+            list-style-type: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 10px;
+        }
+        
+        #dus li {
+            padding: 8px 15px;
+            border-left: 3px solid var(--neon-purple);
+            margin-bottom: 5px;
+            transition: all 0.3s;
+        }
+        
+        #dus li:hover {
+            background-color: rgba(255, 42, 109, 0.1);
+            border-left: 3px solid var(--neon-blue);
+            transform: translateX(5px);
+        }
+        
+        .container ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .container li {
+            margin: 0 15px;
+        }
+        
+        .container a {
+            color: var(--neon-blue);
+            font-size: 1.1em;
+            padding: 5px 10px;
+            position: relative;
+        }
+        
+        .container a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--neon-pink);
+            transition: width 0.3s;
+        }
+        
+        .container a:hover::after {
+            width: 100%;
+        }
+        
+        header {
+            padding: 15px 0;
+            background-color: rgba(13, 2, 33, 0.8);
+            border-bottom: 1px solid var(--neon-purple);
+        }
+        
+        img {
+            display: block;
+            margin: 20px auto;
+            border: 2px solid var(--neon-blue);
+            box-shadow: 0 0 15px var(--neon-blue);
+        }
+        
+        footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        #text {
+            background-color: transparent;
+            border: 1px solid var(--neon-pink);
+            color: var(--neon-pink);
+            padding: 8px 15px;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        #text:hover {
+            background-color: var(--neon-pink);
+            color: var(--dark-bg);
+        }
+        
+        #text a {
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        i, u {
+            color: var(--neon-pink);
+        }
+          n {
+            color: var(--neon-pink);
+            font-style: italic;
+        }
+        .button-links {
+    display: flex;
+    gap: 10px;
+}
+          .button-links {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .button-link {
+        color: inherit;
+        text-decoration: none;
+        display: block;
+    }
+    
+    .button-link:hover {
+        text-decoration: underline;
+    }
+       .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+        }
+        
+        .modal-content {
+            background-color: #111;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #00ff00;
+            width: 80%;
+            max-width: 500px;
+            text-align: center;
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #00ff00;
+        }
+        
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .close:hover {
+            color: #ff0000;
+        }
+        
+        .channel-link {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .channel-link:hover {
+            background-color: #128C7E;
+            transform: scale(1.05);
+        }
+        
+        .verify-btn {
+            padding: 10px 20px;
+            background-color: #00ff00;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        .verify-btn:hover {
+            background-color: #00cc00;
+        }
+        
+        .blur {
+            filter: blur(5px);
+            pointer-events: none;
+        }
